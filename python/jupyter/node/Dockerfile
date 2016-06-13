@@ -31,6 +31,8 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 
 RUN npm install -g ijavascript
 
-WORKDIR /root
+VOLUME ["/notebook"]
+
+WORKDIR /notebook
 
 CMD [ "ijs", "--ip", "0.0.0.0" ]
