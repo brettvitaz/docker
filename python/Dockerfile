@@ -1,7 +1,7 @@
 FROM buildpack-deps:jessie
 
-ENV PYTHON2_VERSION 2.7.11
-ENV PYTHON3_VERSION 3.5.1
+ENV PYTHON2_VERSION 2.7.12
+ENV PYTHON3_VERSION 3.5.2
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		git \
