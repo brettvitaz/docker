@@ -1,6 +1,9 @@
 FROM python:latest
 
-RUN pip3 install jupyter
+RUN pip2 install jupyter \
+	&& pip3 install jupyter \
+	&& python2 -m IPython kernel install \
+	&& python3 -m IPython kernel install
 
 EXPOSE 8888
 
