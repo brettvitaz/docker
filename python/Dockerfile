@@ -15,9 +15,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		libbz2-dev \
 		libreadline-dev \
 		libsqlite3-dev \
-		llvm \
 		libncurses5-dev \
 		libncursesw5-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN echo "deb http://apt.llvm.org/jessie/ llvm-toolchain-jessie-3.7 main" >> /etc/apt/sources.list \
+	&& wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add - \
+ 	&& apt-get update && apt-get install -y \
+ 		libedit-dev \
+ 		llvm-3.7 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash \
