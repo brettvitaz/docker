@@ -4,6 +4,7 @@ ENV PYTHON2_VERSION 2.7.12
 ENV PYTHON3_VERSION 3.5.2
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+		sudo \
 		git \
 		wget \
 		curl \
