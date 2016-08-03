@@ -35,5 +35,4 @@ RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/py
     && python-build $PYTHON2_VERSION /usr/local \
     && pip2 install --upgrade pip setuptools \
     && python-build $PYTHON3_VERSION /usr/local \
-    && pip3 install --upgrade pip setuptools \
-    && pip3 install virtualenv
+    && pip3 install --upgrade pip setuptools
