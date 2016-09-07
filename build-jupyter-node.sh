@@ -2,4 +2,4 @@
 
 set -e
 
-docker build -t jupyter-node:latest -t jupyter-node:v1.0 ./python/jupyter/node
+docker build $1 -t jupyter-node:latest -t jupyter-node:v1.0 -t sample/repo ./python/jupyter/node

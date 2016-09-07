@@ -2,4 +2,4 @@
 
 set -e
 
-docker build -t python:latest -t python:v1.0 ./python
+docker build $1 -t python:latest -t python:v1.0 ./python

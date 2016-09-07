@@ -2,4 +2,4 @@
 
 set -e
 
-docker build -t jupyter:latest -t jupyter:v1.0 ./python/jupyter
+docker build $1 -t jupyter:latest -t jupyter:v1.0 ./python/jupyter
